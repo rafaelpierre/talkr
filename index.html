@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chatbot Interface</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<script src="js/main.js"></script>
+</head>
+<body>
+
+<div class="chat-interface">
+    <div class="chat-header">
+        <div class="logo">ChatBot</div>
+        <div class="menu-icon">☰</div>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+        <div class="message-container ai-message-container">
+            <div class="message ai-message">
+                <p>Hello! How can I assist you today?</p>
+            </div>
+            <img src="img/ai.webp" alt="AI Avatar" class="avatar">
+        </div>
+        
+        <div class="message-container user-message-container">
+            <img src="img/user.webp" alt="User Avatar" class="avatar">
+            <div class="message user-message">
+                <p>Can you tell me more about your services?</p>
+            </div>
+        </div>
+        <!-- More messages here -->
+    </div>
+    <div class="chat-input-container">
+        <input type="text" placeholder="Type your message here..." id="chat-input-field">
+        <button id="send-message" aria-label="Send">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22V2M12 2L5 9M12 2L19 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling on the body */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.chat-interface {
+    width: 100%;
+    max-width: 700px;
+    height: 90vh; /* Adjusted to control the overall chat interface height */
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent scrolling inside the chat interface */
+}
+
+.chat-header {
+    background-color: #2a2a2a;
+    padding: 20px; /* Increase padding for a taller header, or you can use height instead */
+    display: flex; /* Enables flexbox */
+    justify-content: space-between; /* Keeps items spaced out */
+    align-items: center; /* Vertically centers items */
+    font-size: 1.2rem; /* Optional: Increase font size for larger text */
+}
+
+.logo, .menu-icon {
+    font-weight: bold;
+    color: #a9abad;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    overflow-y: auto; /* Allows scrolling within the chat messages */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns messages to the bottom */
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: center;
+    background-color: #333; /* Dark background color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 5px; /* Padding inside the container */
+    margin: 10px; /* Margin around the container to separate from other elements */
+}
+
+#chat-input-field {
+    flex-grow: 1;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #333; /* Match container bg color */
+    border: none; /* Remove default border */
+    color: rgb(197, 192, 192); /* Light text color for contrast */
+    padding: 10px 15px; /* Padding inside the input */
+    border-radius: 20px; /* Ensure input edges are rounded */
+    margin-right: 8px; /* Space between input field and send button */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#send-message {
+    background-color: transparent; /* Make button background transparent */
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* SVG icon color for contrast */
+}
+
+#send-message svg {
+    fill: white; /* Ensure SVG fills with the correct color if needed */
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .chat-interface {
+        width: 95%;
+        height: 95vh; /* Adjust for smaller devices to utilize more screen */
+    }
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ai-message-container {
+    justify-content: flex-start;
+}
+
+.user-message-container {
+    justify-content: flex-start;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Adjust margin for alignment and spacing */
+    margin-right: 10px; /* For user messages */
+    margin-left: 10px; /* For AI messages, ensure it's outside the bubble */
+}
+.message {
+    position: relative;
+    max-width: 80%;
+    padding: 5px 15px;
+    border-radius: 20px; /* Maintain rounded corners for the speech bubble */
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: white;
+    display: flex; /* Use flex to better control the layout */
+    align-items: center; /* Center align the items */
+}
+
+.ai-message {
+    background-color: #373E47;
+    margin-left: auto; /* AI messages align to the right */
+    margin-right: 10px; /* Space for the tail */
+}
+
+.user-message {
+    background-color: #6328dc;
+    margin-left: 10px; /* Space for the tail */
+    margin-right: auto; /* User messages align to the left */
+}
+
+/* Tail adjustments */
+.message:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.ai-message:after {
+    left: 100%; /* Position the tail to the right of the bubble */
+    border-width: 10px 0 10px 10px; /* Adjust tail shape */
+    border-color: transparent transparent transparent #373E47; /* Right tail matching AI message bubble color */
+}
+
+.user-message:after {
+    right: 100%; /* Position the tail to the left of the bubble */
+    border-width: 10px 10px 10px 0; /* Adjust tail shape */
+    border-color: transparent #6328dc transparent transparent; /* Left tail matching user message bubble color */
+}
+
+.feedback-icons {
+    position: absolute; /* Absolutely position the feedback icons */
+    bottom: -15px; /* Adjust as needed to place correctly below the bubble */
+    left: 40px; /* Adjust for right alignment and spacing from the bubble */
+    display: flex;
+}
+
+.feedback-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 2px 5px; /* Adjust padding around the icons for easier clicking */
+    color: #7c7e80; /* Adjust the color as needed */
+    font-size: 20px; /* Control the icon size, adjust as needed */
+}
