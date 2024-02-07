@@ -15,7 +15,8 @@ A simple Rust Web App prototype for an AI Chatbot.
 ### Instructions
 
 * Make sure you have **Rust** installed
-* From a terminal, run: `cargo run`
+* From a terminal, run: `cargo build --release`
+* Run the create: `cargo run release`
 * From a browser, go to `http://localhost:3030`
 
 
