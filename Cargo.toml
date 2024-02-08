@@ -8,6 +8,8 @@ edition = "2021"
 [dependencies]
 actix-web = "4.0"
 actix-files = "0.6.0" # For serving static files
+log = "0.4.20"
+pretty_env_logger = "0.2.0-rc.2"
 
 [profile.dev]
 opt-level = 0
