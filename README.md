@@ -1,6 +1,10 @@
 # talkr
 A simple Rust Web App prototype for an AI Chatbot.
 
+### UI Demo
+
+<img src="img/talkr.png" />
+
 ### Components
 
 #### Backend
@@ -19,7 +23,3 @@ A simple Rust Web App prototype for an AI Chatbot.
 * Run the create: `cargo run release`
 * From a browser, go to `http://localhost:3030`
 
-
-### UI Demo
-
-<img src="img/talkr.png" />
