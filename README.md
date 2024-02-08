@@ -21,5 +21,12 @@ A simple Rust Web App prototype for an AI Chatbot.
 * Make sure you have **Rust** installed
 * From a terminal, run: `cargo build --release`
 * Run the create: `cargo run release`
+  * You can also run the standalone binary without cargo: `./target/release/talkr`
 * From a browser, go to `http://localhost:3030`
+
+### Misc
+
+* By default, Actix Web spins up 20 workers
+* Log level is set to `INFO`
+
 
