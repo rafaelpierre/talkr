@@ -3,7 +3,7 @@ A simple Rust Web App prototype for an AI Chatbot.
 
 <hr />
 
-<img src="img/logo.webp" style="width: 50%; text-align: center;"/>
+<p align="center"><img src="img/logo.webp" style="width: 50%;"/></p>
 
 <hr />
 
