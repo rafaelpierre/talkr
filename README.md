@@ -1,6 +1,8 @@
 # talkr
 A simple Rust Web App prototype for an AI Chatbot.
 
+<img src="img/logo.webp" />
+
 ### UI Demo
 
 <img src="img/talkr.png" />
